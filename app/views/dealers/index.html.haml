@@ -1,16 +1,24 @@
 .container
-  %h1 Lista dealerów
+  %h1
+    Lista dealerów
+    = link_to 'Nowy Dealer', new_dealer_path, :class=>"btn btn-primary"
   %br
   %h4
     Suma samochodów na stanie dealerów wynosi:
     %br
-    = @samochody
+    %strong
+      = @samochody
+    samochodów
   %h4
     Sumaryczne dochody od dealerów wynoszą:
     %br
-    = @przychody
+    %strong
+      = @przychody
+    zł/miesiąc
 
-  = link_to 'Nowy Dealer', new_dealer_path, :class=>"btn btn-primary"
+  %form
+    = text_field_tag(:filtr)
+    = submit_tag "Filtruj Właścicieli"
   %br
   %br
   %table.table

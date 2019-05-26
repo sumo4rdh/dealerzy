@@ -4,9 +4,9 @@ class DealersController < ApplicationController
   # GET /dealers
   def index
     @sortuj = params[:sortuj]
-    @filtruj = params[:filtruj]
-    if @filtruj != nil
-      filtrowani_dealerzy = Dealer.where(miasto: @filtruj)
+    @filtr = params[:filtr]
+    if @filtr != nil
+      filtrowani_dealerzy = Dealer.where(['wlasciciel LIKE ?', "%#{@filtr}%"])
     else
       filtrowani_dealerzy = Dealer.all
     end
@@ -85,6 +85,6 @@ class DealersController < ApplicationController
       @dealer = Dealer.find(params[:id])
     end
     def dealer_params
-      params.require(:dealer).permit(:nazwa, :adress, :telefon, :miasto, :wlasciciel, :samochody, :przychody)
+      params.require(:dealer).permit(:nazwa, :adress, :telefon, :miasto, :wlasciciel, :samochody, :przychody, :query)
     end
 end

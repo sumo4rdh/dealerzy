@@ -21,6 +21,6 @@
   %p
     %strong Przychody:
     = @dealer.przychody
-  = link_to 'Edit', edit_dealer_path(@dealer)
+  = link_to 'Edit', edit_dealer_path(@dealer), :class => 'btn btn-primary'
   |
-  = link_to 'Back', dealers_path, :class => 'btn'
+  = link_to 'Back', dealers_path, :class => 'btn btn-primary'
