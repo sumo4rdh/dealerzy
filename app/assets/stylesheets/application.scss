@@ -13,4 +13,9 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap"
+@import "bootstrap";
+
+.table thead th.col{
+  vertical-align: middle;
+  white-space: nowrap;
+}

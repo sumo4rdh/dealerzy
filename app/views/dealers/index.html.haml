@@ -9,6 +9,10 @@
     Sumaryczne dochody od dealerów wynoszą:
     %br
     = @przychody
+
+  = link_to 'Nowy Dealer', new_dealer_path, :class=>"btn btn-primary"
+  %br
+  %br
   %table.table
     %thead.thead-dark
       %tr
@@ -25,7 +29,10 @@
           = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "wlasciciel"), :class=>"btn btn-light"
         %th.col
           Samochody
-          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "wlasciciel"), :class=>"btn btn-light"
+          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "samochody"), :class=>"btn btn-light"
+        %th.col
+          Przychody
+          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "przychody"), :class=>"btn btn-light"
         %th.col{colspan: "3"}
     %tbody
       - @dealers.each do |dealer|
@@ -36,9 +43,7 @@
           %td= dealer.miasto
           %td= dealer.wlasciciel
           %td= dealer.samochody
+          %td= dealer.przychody
           %td= link_to 'Pokaż', dealer
           %td= link_to 'Edytuj', edit_dealer_path(dealer)
-          %td= link_to 'Usuń', dealer, method: :delete, data: { confirm: 'Are you sure?' }
-  %br
-  = @test
-  = link_to 'Nowy Dealer', new_dealer_path, :class=>"btn btn-primary"
+          %td= link_to 'Usuń', dealer, method: :delete, data: { confirm: 'Czy na pewno usunąć tego dealer-a?' }

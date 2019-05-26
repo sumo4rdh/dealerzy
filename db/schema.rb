@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_26_115642) do
   create_table "dealers", force: :cascade do |t|
     t.string "nazwa"
     t.string "adress"
-    t.integer "telefon"
+    t.string "telefon"
     t.string "miasto"
     t.string "wlasciciel"
     t.integer "samochody"
