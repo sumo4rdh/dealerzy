@@ -1,0 +1,44 @@
+.container
+  %h1 Lista dealerów
+  %br
+  %h4
+    Suma samochodów na stanie dealerów wynosi:
+    %br
+    = @samochody
+  %h4
+    Sumaryczne dochody od dealerów wynoszą:
+    %br
+    = @przychody
+  %table.table
+    %thead.thead-dark
+      %tr
+        %th.col
+          Nazwa
+          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "nazwa"), :class=>"btn btn-light"
+        %th.col Adress
+        %th.col Telefon
+        %th.col
+          Miasto
+          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "miasto"), :class=>"btn btn-light"
+        %th.col
+          Wlasciciel
+          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "wlasciciel"), :class=>"btn btn-light"
+        %th.col
+          Samochody
+          = link_to raw("&uarr;"), dealers_path(@Dealers, :sortuj => "wlasciciel"), :class=>"btn btn-light"
+        %th.col{colspan: "3"}
+    %tbody
+      - @dealers.each do |dealer|
+        %tr
+          %td= dealer.nazwa
+          %td= dealer.adress
+          %td= dealer.telefon
+          %td= dealer.miasto
+          %td= dealer.wlasciciel
+          %td= dealer.samochody
+          %td= link_to 'Pokaż', dealer
+          %td= link_to 'Edytuj', edit_dealer_path(dealer)
+          %td= link_to 'Usuń', dealer, method: :delete, data: { confirm: 'Are you sure?' }
+  %br
+  = @test
+  = link_to 'Nowy Dealer', new_dealer_path, :class=>"btn btn-primary"

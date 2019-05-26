@@ -1,0 +1,26 @@
+.container
+  %p#notice= notice
+  %p
+    %strong Nazwa:
+    = @dealer.nazwa
+  %p
+    %strong Adress:
+    = @dealer.adress
+  %p
+    %strong Telefon:
+    = @dealer.telefon
+  %p
+    %strong Miasto:
+    = @dealer.miasto
+  %p
+    %strong Wlasciciel:
+    = @dealer.wlasciciel
+  %p
+    %strong Samochody:
+    = @dealer.samochody
+  %p
+    %strong Przychody:
+    = @dealer.przychody
+  = link_to 'Edit', edit_dealer_path(@dealer)
+  |
+  = link_to 'Back', dealers_path, :class => 'btn'
