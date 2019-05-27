@@ -1,3 +1,5 @@
+# Agregator Dealerów Marki Samochodowej
+
 # Omówienie
 Tematem projektu jest przygotowanie internetowej bazy danych dealerów marki
 samochodowej w polsce.
@@ -16,3 +18,12 @@ Baza danych przechowującej takie dane jak:
 - Właściciel
 - Ilość samochodów na stanie
 - przychody roczne dealera
+
+# Cele
+1. Przygotowanie działającej aplikacji web wspierające Importerów Samochodów
+2. Stworzenie funkcjonalności dodawania, usuwania, i edycji poszczególnych dealerów
+3. Stworzenie funkcjonalności sortowania dealerów po mieście, po nazwie, po
+właścicielu, po przychodach
+4. Stworzenie funkcjonalności filtrowania dealerów po właścicielu
+5. Aplikacji web będzie wyświetlać listę dealerów, informacje o ich sumarycznym
+przychódzie oraz ilość samochodów na stanie
