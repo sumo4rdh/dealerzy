@@ -26,4 +26,4 @@ Baza danych przechowującej takie dane jak:
 właścicielu, po przychodach
 4. Stworzenie funkcjonalności filtrowania dealerów po właścicielu
 5. Aplikacji web będzie wyświetlać listę dealerów, informacje o ich sumarycznym
-przychódzie oraz ilość samochodów na stanie
+przychodzie oraz ilość samochodów na stanie
